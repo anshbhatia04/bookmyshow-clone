@@ -1,4 +1,6 @@
 import './App.css';
+
+// Routing
 import {Routes, Route} from "react-router-dom";
 
 // React Slick CSS

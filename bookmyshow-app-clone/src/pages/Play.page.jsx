@@ -1,9 +1,10 @@
 import React from 'react';
+import DefaultLayoutHoc from '../layout/Default.layout';
 
-const Play = () => {
+const PlayPage = () => {
     return (
         <div> Play </div>
-    )
-}
+    );
+};
 
-export default PlayPage;
+export default DefaultLayoutHoc(PlayPage);

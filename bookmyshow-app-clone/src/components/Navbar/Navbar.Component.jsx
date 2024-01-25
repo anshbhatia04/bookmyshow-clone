@@ -8,7 +8,7 @@ function NavSm() {
         <div>
           <h3 className="text-xl font-bold">It All Starts Here!</h3>
           <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
-            Bangalore <BiChevronDown />
+            New Delhi <BiChevronDown />
           </span>
         </div>
         <div className="w-8 h-8">
@@ -64,7 +64,6 @@ const Navbar = () => {
   return (
     <nav className="bg-darkBackground-700 px-4 py-3">
       {/* Small Screen NavBar */}
-      {/* >= md its hidden, only visible on small screen size */}
       <div className="md:hidden">
         {/* <div className="sm:flex md:hidden lg:hidden"> */}
         <NavSm />
