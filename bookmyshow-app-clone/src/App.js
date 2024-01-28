@@ -1,5 +1,6 @@
 import './App.css';
 import axios from "axios";
+import dotenv from "dotenv";
 
 // Routing
 import {Routes, Route} from "react-router-dom";

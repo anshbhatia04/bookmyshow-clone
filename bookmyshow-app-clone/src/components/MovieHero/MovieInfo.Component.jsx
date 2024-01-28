@@ -27,18 +27,18 @@ const MovieInfo = () => {
           {movie.original_title}
         </h1>
         <div className="text-white flex flex-col gap-2">
-          <h4>4.4k rating</h4>
-          <h4>English, Hindi, Telugu, Tamil</h4>
+          <h4>4.4k ratings</h4>
+          <h4>English, Hindi, Tamil, Telugu</h4>
           <h4>
             {movie.runtime} min | {genres}
           </h4>
         </div>
         <div className="flex items-center gap-3 md:px-4 md:w-screen text-xl px-4">
           <button className="bg-red-500  py-3 text-white font-semibold rounded-lg">
-            Rent $149
+            Rent ₹149
           </button>
           <button className="bg-red-500  py-3 text-white font-semibold rounded-lg">
-            Buy $999
+            Buy ₹999
           </button>
         </div>
       </div>
