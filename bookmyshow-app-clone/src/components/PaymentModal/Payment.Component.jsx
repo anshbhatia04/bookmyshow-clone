@@ -3,9 +3,14 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
 const PaymentModal = ({setIsOpen, isOpen, price}) => {
-  const closeModal= () => {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
+
+  const launchRazorPay = () => {
+
+  };
+   
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -50,7 +55,7 @@ const PaymentModal = ({setIsOpen, isOpen, price}) => {
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
+                      onClick={launchRazorPay}
                     >
                       Pay ₹ {price}
                     </button>

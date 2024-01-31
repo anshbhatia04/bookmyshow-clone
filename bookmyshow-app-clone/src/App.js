@@ -1,6 +1,6 @@
 import './App.css';
 import axios from "axios";
-import dotenv from "dotenv";
+// import .env from ".env";
 
 // Routing
 import {Routes, Route} from "react-router-dom";
