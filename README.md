@@ -18,6 +18,6 @@ Components:
                  >> MovieInfo.Component.jsx
     >> Navbar >> Navbar.Component.jsx
               >> MovieNavbar.Component.jsx  
-    >> PaymentModel >> Payment.Component.jsx
+    >> PaymentModal >> Payment.Component.jsx
     >> PlayFilters >> Filters.Component.jsx
     >> PosterSlider >> PosterSlider.Component.jsx 
