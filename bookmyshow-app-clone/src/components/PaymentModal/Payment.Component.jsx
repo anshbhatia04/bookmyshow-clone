@@ -1,16 +1,31 @@
-import React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import React from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 
-const PaymentModal = ({setIsOpen, isOpen, price}) => {
+const PaymentModal = ({ setIsOpen, isOpen, price }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
 
-  const launchRazorPay = () => {
+  const launchRazorPay = () =>{
+    let options = {
+      key: "rzp_test_trSZbjvDJSItP3",
+      amount: price * 100,
+      currency: "INR",
+      name: "Book My Show Clone",
+      description: "Movie purchase or rent",
+      handler: () => {
+        setIsOpen(false);
+        alert("Payment Succesful");
+      },
+      theme: {color: "#c4242d"},
+    };
 
-  };
-   
+    let razorPay = window.Razorpay(options);
+    razorPay.open();
+
+  }
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -24,7 +39,7 @@ const PaymentModal = ({setIsOpen, isOpen, price}) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -38,16 +53,16 @@ const PaymentModal = ({setIsOpen, isOpen, price}) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Please make a payment!
+                    Please make a payment
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Hello, Please make the payment with the following steps
+                      Hello please make the payment with the following steps
                     </p>
                   </div>
 
@@ -74,7 +89,7 @@ const PaymentModal = ({setIsOpen, isOpen, price}) => {
         </Dialog>
       </Transition>
     </>
-  )
-}
+  );
+};
 
 export default PaymentModal;
