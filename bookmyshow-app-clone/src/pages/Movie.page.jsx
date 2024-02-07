@@ -35,19 +35,19 @@ const MoviePage = () => {
   }, [id]);
 
   useEffect(() => {
-    const requestRecommededMovies = async () => {
+    const requestRecommendedMovies = async () => {
       const getRecommendedMovies = await axios.get(
         `/movie/${id}/recommendations`
       );
       setRecommendedMovies(getRecommendedMovies.data.results);
     };
-    requestRecommededMovies();
+    requestRecommendedMovies();
   }, [id]);
 
   useEffect(() => {
     const requestMovie = async () => {
-      const getMovieDate = await axios.get(`/movie/${id}`);
-      setMovie(getMovieDate.data);
+      const getMovie = await axios.get(`/movie/${id}`);
+      setMovie(getMovie.data);
     };
     requestMovie();
   }, [id]);
@@ -124,7 +124,7 @@ const MoviePage = () => {
       <div className="my-12 container px-4 lg-ml-20 lg:w-2/1">
         <div className="flex flex-col items-start gap-3">
           <h1 className="text-gray-800 font-bold gap-3 text-2xl">
-            About the movie
+            About the Movie
           </h1>
           <p>{movie.overview}</p>
         </div>
