@@ -19,6 +19,13 @@ const MoviePoster = (props) => {
         >
           {props.title}
         </h3>
+        {/* <p
+      className={`text-lg font-bold ${
+        props.isDark ? "text-white" : "text-gray-700"
+      }`}
+    >
+      {props.subtitle}
+    </p> */}
       </div>
     </Link>
   );
@@ -59,3 +66,6 @@ const Poster = (props) => {
 };
 
 export default Poster;
+
+
+

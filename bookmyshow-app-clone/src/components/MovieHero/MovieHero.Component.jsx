@@ -6,20 +6,22 @@ const MovieHero = () => {
   const { movie } = useContext(MovieContext);
 
   const genres = movie.genres?.map(({ name }) => name).join(", ");
+
+  // console.log(genres);
   return (
     <>
       <div>
         {/* small and medium screen size */}
         <div className="lg:hidden w-full">
           <img
-            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="Cover Poster"
             className="m-4 rounded"
             style={{ width: "calc(100%-2rem)" }}
           />
         </div>
         <div className="flex flex-col gap-3 lg:hidden">
-          <div className="flex flex-col-reverse gap-3 px-4 my-3">
+        <div className="flex flex-col-reverse gap-3 px-4 my-3">
             <div className="text-black flex flex-col gap-2 md:px-4">
               <h4>4.4k ratings</h4>
               <h4>English, Hindi, Tamil, Telugu</h4>
@@ -37,6 +39,7 @@ const MovieHero = () => {
             </button>
           </div>
         </div>
+
         {/* Large Screen Size */}
         <div
           className="relative hidden w-full lg:block"
@@ -52,7 +55,7 @@ const MovieHero = () => {
             <div className="absolute z-30 left-24 top-10 flex items-center gap-10">
               <div className="w-64 h-96">
                 <img
-                  src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                   alt="Movie Poster"
                   className="w-full h-full rounded-lg
                 "
@@ -63,7 +66,7 @@ const MovieHero = () => {
               </div>
             </div>
             <img
-              src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
               alt="Backdrop poster"
               className="w-full h-full object-cover object-center"
             />
@@ -75,3 +78,7 @@ const MovieHero = () => {
 };
 
 export default MovieHero;
+
+
+
+
