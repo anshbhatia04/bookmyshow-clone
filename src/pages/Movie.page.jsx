@@ -13,7 +13,7 @@ import Cast from "../components/Cast/Cast.Component";
 const axiosInstance = axios.create({
   baseURL: "https://api.themoviedb.org/3", // replace with your actual API base URL
   params: {
-    api_key: "17dfcb01c9d9b48a0d66e82f2b5b26f1", // replace with your actual API key
+    api_key: "31e2291d638799d6d8e7352e470aaada", // replace with your actual API key
   },
 });
 
